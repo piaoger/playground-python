@@ -2,9 +2,9 @@
 Vagrant.configure(2) do |config|
 
   # for bad network condition, using local box cache instead
-  config.vm.box = "xenial-server-cloudimg-amd64-vagrant-local"
-  # config.vm.box = "xenial"
-  # config.vm.box_url = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
+  #config.vm.box = "xenial-server-cloudimg-amd64-vagrant-local"
+  config.vm.box = "xenial"
+  config.vm.box_url = "https://cloud-images.ubuntu.com/xenial/current/xenial-server-cloudimg-amd64-vagrant.box"
 
   config.vm.hostname = "bootstrap"
 
