@@ -25,4 +25,5 @@ urlpatterns = [
 
 urlpatterns += [
     url(r'^hello', echoviews.hello),
+    url(r'^user', echoviews.user),
 ]

@@ -167,7 +167,9 @@ class Migration(migrations.Migration):
     ]
 ```
 
+- You can also change models in administration page.
 
+  For more details, please see **Admin Page in Django*
 
 ## urlpatterns
 
@@ -202,7 +204,7 @@ Reference:
 
 ![](./assets/django-admin-page.png)
 
-Admin app is ON by default.
+- Admin app is ON by default.
 
 ```python
 # setting.py
@@ -233,6 +235,25 @@ $Python manage.py shell
 
 
 
+- Register and Edit model Object in Administration page
+
+  You need to register model in app's admin.py
+
+```
+# ./apps/echo/admin.py
+# Register your models here.
+from .models import Person
+admin.site.register(Person)
+```
+
+After that, you can find that there are some thing new in administration page:
+
+![models](./assets/django-admin-model.png)
+
+![models: change](./assets/django-admin-model-change.png)
+
+![models: change value](./assets/django-admin-model-changevalue.png)
+
 ## Django projects v.s apps
 
  Django中project和APP的区别: project包含全局配置，构成一个全局的运行平台；而各个APP都运行在这个全局的运行平台上，APP代表的是一个相对独立的功能模块，因为程序的逻辑都在APP中。
@@ -247,7 +268,9 @@ Python manage.py syncdb 会为该project内的所有app进行数据库初始化�
 
 
 
-# Vagrant: Empty reply from server
+## issues
+
+### Vagrant: Empty reply from server
 
 In virtual machine: 
 
@@ -278,3 +301,5 @@ $python manage.py runserver 0.0.0.0:8000&
 [django models例子](http://www.ziqiangxuetang.com/django/django-models.html)
 
 [django连接mysql数据库](http://www.nowamagic.net/academy/detail/1318508)
+
+[awesome django](https://gitlab.com/rosarior/awesome-django)
