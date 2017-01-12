@@ -20,7 +20,7 @@ def user(request):
 
     if person:
         data = {
-            'name': person.age,
+            'name': person.name,
             'age': person.age
         }
         resp = {
