@@ -19,6 +19,7 @@ from django.contrib import admin
 from echo import views as echoviews
 
 urlpatterns = [
+	# Uncomment the next line to enable the admin:
     url(r'^admin/', admin.site.urls),
 ]
 

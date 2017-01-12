@@ -181,7 +181,57 @@ urlpatterns = [
 ]
 ```
 
+Reference: 
+
 [url dispatcher](https://docs.djangoproject.com/en/1.10/topics/http/urls/)
+
+
+
+## Admin page in Django
+
+- Create superuser
+
+  ```shell
+  # create user: admin/admin1234
+  python manage.py createsuperuser
+  ```
+
+- adminstration page
+
+![admin login](./assets/django-admin-login.png)
+
+![](./assets/django-admin-page.png)
+
+Admin app is ON by default.
+
+```python
+# setting.py
+INSTALLED_APPS = [
+    'django.contrib.admin',
+]
+
+# urls.py
+urlpatterns = [
+	# Uncomment the next line to enable the admin:
+    url(r'^admin/', admin.site.urls),
+]
+```
+
+
+
+- change password with manage.py shell
+
+```shell
+$Python manage.py shell
+>>> from django.contrib.auth.models import User 
+>>> user = User.objects.get(username='admin')
+>>> user.password
+>>> u'pbkdf2_sha256$30000$3SPLthkVV7Fm$WB1Hj1Mv6pewiQvN6XfK9TCC52rQ+61HzT2ImZ0hn0M='
+>>> user.set_password('new_password')
+>>> user.save()
+```
+
+
 
 ## Django projects v.s apps
 
@@ -220,8 +270,6 @@ How to resolve
 $
 $python manage.py runserver 0.0.0.0:8000&
 ```
-
-
 
 
 
