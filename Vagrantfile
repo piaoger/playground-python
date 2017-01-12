@@ -12,6 +12,8 @@ Vagrant.configure(2) do |config|
   # config.vm.synced_folder ".", "/vagrant", owner: "root", group: "root"
   config.vm.synced_folder ".", "/vagrant"
 
+  config.vm.network "forwarded_port", guest: 8000, host: 8031
+
   config.vm.provision "shell", path: "provision.sh" , privileged: false
 end
 

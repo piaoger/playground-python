@@ -93,3 +93,5 @@ ENV/
 
 /temp
 .vagrant/
+
+play-django/db.sqlite3
