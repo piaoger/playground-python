@@ -1,9 +1,9 @@
-# pjango
+# Django
 
 
 # Python Django Web Framework
 
-## install python & pjango
+## install python & Django
 
 ```
 sudo apt-get install python-pip python-dev virtualenv -y
@@ -11,14 +11,14 @@ sudo pip install Django
 
 ```
 
-### check your installation 
+### check your installation
 
 ``` python
 import django
 django.get_version()
 ```
 
-### django admin tool 
+### django admin tool
 
 安装完Django之后，就已经有了可用的管理工具django-admin.py。我们可以使用django来创建project，app等。
 
@@ -58,7 +58,7 @@ django 模型与数据库息息相关，与数据库相关的代码一般写在 
 
 Django 支持 sqlite3, MySQL和PostgreSQL等数据库，只需要在settings.py中配置即可，不用更改models.py中的代码，丰富的API极大的方便了使用。默认的数据库是sqlite。
 
-- settings.py 
+- settings.py
 
 ```
   # Database
@@ -101,7 +101,7 @@ class Person(models.Model):
 
 You can download sqlite tool from: http://www.sqlite.org/2017/sqlite-tools-linux-x86-3160200.zip
 
- 
+
 
 ![create models](./assets/django-create-models-db.png)
 
@@ -183,7 +183,7 @@ urlpatterns = [
 ]
 ```
 
-Reference: 
+Reference:
 
 [url dispatcher](https://docs.djangoproject.com/en/1.10/topics/http/urls/)
 
@@ -225,7 +225,7 @@ urlpatterns = [
 
 ```shell
 $Python manage.py shell
->>> from django.contrib.auth.models import User 
+>>> from django.contrib.auth.models import User
 >>> user = User.objects.get(username='admin')
 >>> user.password
 >>> u'pbkdf2_sha256$30000$3SPLthkVV7Fm$WB1Hj1Mv6pewiQvN6XfK9TCC52rQ+61HzT2ImZ0hn0M='
@@ -260,19 +260,23 @@ After that, you can find that there are some thing new in administration page:
 
 ## Python manage.py makemigrations & migrate
 
-老版本的django使用syncdb，而新版的已经开始使用makemigrations & migrate 
+老版本的django使用syncdb，而新版的已经开始使用makemigrations & migrate
 
 Python manage.py syncdb 会为该project内的所有app进行数据库初始化，创建表结构，初始化数据，创建索引等。若有app改变了数据库结构，或者是有新的app增加进来，要创建新的表结构，再次运行syncdb，会为这些app进行数据库变更。django怎么识别哪个app是关联了数据库的？要知道自定义的model都是继承自django.db.models.Model这个类的。
 
 当需要命令行操作数据库时，切换数据库账号为开发者账号，支持数据库表结构变更
 
 
+## Django db.models.manager
+
+
+[models.Manager](https://docs.djangoproject.com/en/1.10/topics/db/managers/)
 
 ## issues
 
 ### Vagrant: Empty reply from server
 
-In virtual machine: 
+In virtual machine:
 
 ```
 $python manage.py runserver &
