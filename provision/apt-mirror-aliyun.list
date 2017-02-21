@@ -2,6 +2,7 @@
 
 ## aliyun ubuntu sources
 
+
 deb http://mirrors.aliyun.com/ubuntu/ trusty main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted universe multiverse
 deb http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
@@ -12,3 +13,18 @@ deb-src http://mirrors.aliyun.com/ubuntu/ trusty-security main restricted univer
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-updates main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-proposed main restricted universe multiverse
 deb-src http://mirrors.aliyun.com/ubuntu/ trusty-backports main restricted universe multiverse
+
+
+## for raspberry pi, we may need to use different mirror
+##https://blog.phpgao.com/docker_on_raspberry_pi.html#%E6%9B%BF%E6%8D%A2%E6%BA%90%E4%B8%BA%E5%9B%BD%E5%86%85%E6%BA%90
+## 清华
+#deb http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
+#deb-src http://mirrors.tuna.tsinghua.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
+
+## 东软信息学院
+#deb http://mirrors.neusoft.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
+#deb-src http://mirrors.neusoft.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
+
+## 中国科学技术大学
+#deb http://mirrors.ustc.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
+#deb-src http://mirrors.ustc.edu.cn/raspbian/raspbian/ wheezy main contrib non-free rpi
